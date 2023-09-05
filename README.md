@@ -2,7 +2,7 @@ General information about the CTL course available at https://ctl.polyphys.mat.e
 
 # :wave: Solvent accessible surface area (SASA)
 
-Consider a system composed of filled monodisperse spheres of identical radius $R$ contained in a periodic cubic (3D) box, and surrounded by empty space or 'solvent'. The filled spheres may partially overlap. Two out of the many interesting geometrical properties of such systems are the volume fraction of the filled spheres, and the part of the surface area of the filled region, so-called SASA($r$) that is accessible by an additional 'solvent' sphere of radius $r$ that is fully located in the empty space but touches the surface of the filled region. For $r=0$, SASA is the total surface area of the filled region, and for $r\rightarrow\infty$, SASA approaches zero.  
+Consider a system composed of filled monodisperse spheres of identical radius $R$ contained in a periodic cubic (3D) box, and surrounded by empty space or 'solvent'. The filled spheres may partially overlap. Two out of the many interesting geometrical properties of such systems are the volume fraction of the filled spheres, and the part of the surface area of the filled region, so-called SASA($r$) that is accessible by an additional 'solvent' sphere of radius $r$ that is fully located in the empty space but touches the surface of the filled region. For $r=0$, SASA is the total surface area of the filled region, and for $r\rightarrow\infty$, SASA approaches zero. 
 
 ## def generate_system($N$)
 
@@ -28,12 +28,25 @@ Based on these considerations, develop a method to estimate SASA($r$) for $r>0$.
 
 ## Application 1
 
-Verify the applicability of the formula $\phi=1-\exp(-4\pi N R^3/3)$.
+Verify the applicability of the 3D formula $\phi=1-\exp(-4\pi N R^3/3)$.
 
 ## Application 2
 
-Use the above functions to create a system with $N=10$ spheres of radius $R=0.3$, estimate and print the volume fraction (with standard error), and plot SASA($r$) as function of $r$. 
+Use the above functions to create a system with $N=10$ spheres of radius $R=0.3$, estimate and print the volume fraction (with standard error), and plot SASA($r$) as function of $r$.
 
+## Application 3
 
+Modify the code so that it works equally well for 2D systems and introduce the space dimension $D$ as an additional argument in all functions (allow for $D=2$ or $D=3$).  
 
+## Application 4
+
+Generate a 2D system with $N=50$ circles of radius $R=0.1$ and plot the configuration. 
+
+## Application 5
+
+Verify the applicability of the 2D formula $\phi=1-\exp(-\pi N R^2)$.
+
+## Application 6 (advanced)
+
+Generate a 2D system with $N=30$ circles of radius $R=0.1$ and plot the configuration as well as the region occupied by solvent particles of radius 0.05 that touch the surface of the filled region.  
 

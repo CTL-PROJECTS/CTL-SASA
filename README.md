@@ -28,11 +28,11 @@ Based on these considerations, develop a method to estimate SASA($r$) for $r>0$.
 
 ## Application 1
 
-Verify the applicability of the 3D formula $\phi=1-\exp(-4\pi N R^3/3)$.
+Use the above functions to create systems with $N=50$ spheres of radius $R$ between $R=0$ and $R=1$. Verify the applicability of the 3D formula $\phi=1-\exp(-4\pi N R^3/3)$.
 
 ## Application 2
 
-Use the above functions to create a system with $N=10$ spheres of radius $R=0.3$, estimate and print the volume fraction (with standard error), and plot SASA($r$) as function of $r$. SASA should decrease from a value smaller (why?) or equal to $A$ at $r=0$ to zero at $r=1$.
+Use the above functions to create a system with $N=50$ spheres of radius $R=0.1$, and plot SASA($r$) as function of $r$. SASA should decrease from a value smaller (why?) or equal to $A$ at $r=0$ to zero at $r=1$.
 
 ## Application 3
 

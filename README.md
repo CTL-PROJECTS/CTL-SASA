@@ -32,11 +32,11 @@ Verify the applicability of the 3D formula $\phi=1-\exp(-4\pi N R^3/3)$.
 
 ## Application 2
 
-Use the above functions to create a system with $N=10$ spheres of radius $R=0.3$, estimate and print the volume fraction (with standard error), and plot SASA($r$) as function of $r$.
+Use the above functions to create a system with $N=10$ spheres of radius $R=0.3$, estimate and print the volume fraction (with standard error), and plot SASA($r$) as function of $r$. SASA should monotonically decrease from $A$ at $r=0$ to zero at $r=1$.
 
 ## Application 3
 
-Modify the code so that it works equally well for 2D systems and introduce the space dimension $D$ as an additional argument in all functions (allow for $D=2$ or $D=3$).  
+Modify the code so that it works equally well for 2D systems and introduce the space dimension $D$ as an additional argument in all functions (allow for $D=2$ or $D=3$). Note that several expression such as $A$ have to be adjusted, and generate_system as well. 
 
 ## Application 4
 

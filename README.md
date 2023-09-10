@@ -29,7 +29,7 @@ All three methods should return an estimate for the area $A$ for given $n$.
 
     Check your implementations: upon increasing n the estimate for S should approach the exact result, S = 4.8061..
 
-Having completed these warm-up exercises, you are in the position to treat the more complex problem using similar methods. You are free to choose a method. We propose the following structure of your code: 
+Having completed these warm-up exercises, you are in the position to treat the more complex problem using similar methods. You are free to choose a method. We propose the following structure of your code:  
 
 # SASA code
 

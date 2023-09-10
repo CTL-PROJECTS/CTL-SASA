@@ -4,6 +4,35 @@ General information about the CTL course available at https://ctl.polyphys.mat.e
 
 Consider a system composed of filled monodisperse spheres of identical radius $R$ contained in a periodic cubic (3D) box, and surrounded by empty space or 'solvent'. The filled spheres may partially overlap. Two out of the many interesting geometrical properties of such systems are the volume fraction of the filled spheres, and the part of the surface area of the filled region, so-called SASA($r$) that is accessible by an additional 'solvent' sphere of radius $r$ that is fully located in the empty space but touches the surface of the filled region. For $r=0$, SASA is the total surface area of the filled region, and for $r\rightarrow\infty$, SASA approaches zero. 
 
+# Warm-up exercise 
+
+To prepare you for a possible solution strategy to these problems using random numbers, this project begins with two simpler tasks: (A) the area $A$ enclosed by, and (B) the perimeter $S$ of the overlapping half circles (marked red). 
+
+<img src="https://ctl.polyphys.mat.ethz.ch/CTL-I-PUBLIC/SASA/preSASA.png" width="50%">
+
+The centers of the half circles of radius $R_1=1.5$ and $R_2=0.5$ are at ${\bf c}^{(1)}=(0,0)$ and ${\bf c}^{(2)}=(1.2,0)$. The half circles are both enclosed within the rectangular area $[a,b]\times [c,d]$ with $a=-2$, $b=2$, $c=0$, and $d=2$, as shown.
+(A) Implement the following three methods to estimate area $A$, which becomes especially convenient, if you first define a function $f(x)$ that agrees with the red line, and is zero otherwise, i.e., for $x < c_x^{(1)}-R_1=-1.5$ and $x > c_x^{(2)}+R_2=1.7$.
+
+    Check your python def f(x): plot this function, and compare with the above figure.
+
+The three methods are
+
+1. Classical Riemann definition of an integral upon replacing the half circles by a function $f(x)$, and using $n$ bins of size $dx=(b-a)/n$ to estimate $A=\int_a^b f(x)\ dx$.
+2. Monte Carlo with probability density $p(x)=(b-a)^{-1}$, using $n$ shots. The integal $A$ is estimated via $\langle f(x)/p(x)\rangle = (b-a)\langle f(x)\rangle$, i.e., by the mean $f$-value at the random poxitions $x$, multiplied by the interval length $b-a$.
+3. Monte Carlo with probability density $p(x,y)=[(b-a)(d-c)]^{-1}$, using $n$ shots. The integal $A$ is estimated via the fraction of $y$-values that reside below $f(x)$, multiplied by the rectangular area into which you shoot.
+
+All three methods should return an estimate for the area $A$ for given $n$. 
+
+    Check your implementations: upon increasing n the estimate for A should approach the exact result, A = 3.598616448..
+
+(B) Invent a method to calculate the contour length $S$ of the red line in the above figure. If you choose a Monte Carlo method, instead of shooting into the $x$-axis or into the rectangular area, it may be useful to shoot into the perimeters of the complete half circles, i.e., use $p(\phi)=(\pi R_1)^{-1}$ for the first half circle, and something similar for the 2nd half circle, where $\phi$ denotes a polar angle, $\phi$ in [0,&pi;].
+
+    Check your implementations: upon increasing n the estimate for S should approach the exact result, S = 4.8061..
+
+Having completed these warm-up exercises, you are in the position to treat the more complex problem using similar methods. You are free to choose a method. We propose the following structure of your code: 
+
+# SASA code
+
 ## def generate_system($N$)
 
 Place $N$ points (3D) randomly into a square (or cubic) box of unit side length $1$. Write the coordinates of the $N$ points to a file named coordinates.csv ($N$ rows, $3$ columns, blank-separated numbers). 
@@ -49,4 +78,6 @@ Verify the applicability of the 2D formula $\phi=1-\exp(-\pi N R^2)$.
 ## Application 6 (advanced)
 
 Generate a 2D system with $N=30$ circles of radius $R=0.1$ and plot the configuration as well as the region occupied by solvent particles of radius 0.05 that touch the surface of the filled region.  
+
+[1] pre-SASA: $A=3.598616448$ and $S=4.8061$.
 

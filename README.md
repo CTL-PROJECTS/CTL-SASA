@@ -78,6 +78,3 @@ Verify the applicability of the 2D formula $\phi=1-\exp(-\pi N R^2)$.
 ## Application 6 (advanced)
 
 Generate a 2D system with $N=30$ circles of radius $R=0.1$ and plot the configuration as well as the region occupied by solvent particles of radius 0.05 that touch the surface of the filled region.  
-
-[1] pre-SASA: $A=3.598616448$ and $S=4.8061$.
-

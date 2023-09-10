@@ -6,7 +6,7 @@ Consider a system composed of filled monodisperse spheres of identical radius $R
 
 # Warm-up exercise 
 
-To prepare you for a possible solution strategy to these problems using random numbers, this project begins with two simpler tasks: (A) the area $A$ enclosed by, and (B) the perimeter $S$ of the overlapping half circles (marked red). 
+To prepare you for a possible solution strategy to these problems using random numbers, this project begins with two simpler tasks: (A) the area $A$ enclosed by, and (B) the perimeter $L$  (marked red) of the overlapping half circles. 
 
 <img src="https://ctl.polyphys.mat.ethz.ch/CTL-I-PUBLIC/SASA/preSASA.png" width="50%">
 
@@ -25,9 +25,9 @@ All three methods should return an estimate for the area $A$ for given $n$.
 
     Check your implementations: upon increasing n the estimate for A should approach the exact result, A = 3.598616448..
 
-(B) Invent a method to calculate the contour length $S$ of the red line in the above figure. If you choose a Monte Carlo method, instead of shooting into the $x$-axis or into the rectangular area, it may be useful to shoot into the perimeters of the complete half circles, i.e., use $p(\phi)=(\pi R_1)^{-1}$ for the first half circle, and something similar for the 2nd half circle, where $\phi$ denotes a polar angle, $\phi$ in [0,&pi;].
+(B) Invent a method to calculate the contour length $L$ of the red line in the above figure. If you choose a Monte Carlo method, instead of shooting into the $x$-axis or into the rectangular area, it may be useful to shoot into the perimeters of the complete half circles, i.e., use $p(\varphi)=(\pi R_1)^{-1}$ for the first half circle, and something similar for the 2nd half circle, where $\varphi$ denotes a polar angle, $\varphi$ in [0,&pi;].
 
-    Check your implementations: upon increasing n the estimate for S should approach the exact result, S = 4.8061..
+    Check your implementations: upon increasing n the estimate for L should approach the exact result, L = 4.8061..
 
 Having completed these warm-up exercises, you are in the position to treat the more complex problem using similar methods. You are free to choose a method. We propose the following structure of your code:  
 

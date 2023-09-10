@@ -17,17 +17,17 @@ The centers of the half circles of radius $R_1=1.5$ and $R_2=0.5$ are at ${\bf c
 
 The three methods are
 
-1. Classical Riemann definition of an integral upon replacing the half circles by a function $f(x)$, and using $n$ bins of size $dx=(b-a)/n$ to estimate $A=\int_a^b f(x)\ dx$.
-2. Monte Carlo with probability density $p(x)=(b-a)^{-1}$, using $n$ shots. The integal $A$ is estimated via $\langle f(x)/p(x)\rangle = (b-a)\langle f(x)\rangle$, i.e., by the mean $f$-value at the random poxitions $x$, multiplied by the interval length $b-a$.
-3. Monte Carlo with probability density $p(x,y)=[(b-a)(d-c)]^{-1}$, using $n$ shots. The integal $A$ is estimated via the fraction of $y$-values that reside below $f(x)$, multiplied by the rectangular area into which you shoot.
+1. Classical Riemann definition of an integral upon replacing the half circles by a function $f(x)$, and using $N$ bins of size $dx=(b-a)/N$ to estimate $A=\int_a^b f(x)\ dx$.
+2. Monte Carlo with probability density $p(x)=(b-a)^{-1}$, using $N$ shots. The integal $A$ is estimated via $\langle f(x)/p(x)\rangle = (b-a)\langle f(x)\rangle$, i.e., by the mean $f$-value at the random poxitions $x$, multiplied by the interval length $b-a$.
+3. Monte Carlo with probability density $p(x,y)=[(b-a)(d-c)]^{-1}$, using $N$ shots. The integal $A$ is estimated via the fraction of $y$-values that reside below $f(x)$, multiplied by the rectangular area into which you shoot.
 
-All three methods should return an estimate for the area $A$ for given $n$. 
+All three methods should return an estimate for the area $A$ for given $N$. 
 
-    Check your implementations: upon increasing n the estimate for A should approach the exact result, A = 3.598616448..
+    Check your implementations: upon increasing N the estimate for A should approach the exact result, A = 3.598616448..
 
 (B) Invent a method to calculate the contour length $L$ of the red line in the above figure. If you choose a Monte Carlo method, instead of shooting into the $x$-axis or into the rectangular area, it may be useful to shoot into the perimeters of the complete half circles, i.e., use $p(\varphi)=(\pi R_1)^{-1}$ for the first half circle, and something similar for the 2nd half circle, where $\varphi$ denotes a polar angle, $\varphi$ in [0,&pi;].
 
-    Check your implementations: upon increasing n the estimate for L should approach the exact result, L = 4.8061..
+    Check your implementations: upon increasing N the estimate for L should approach the exact result, L = 4.8061..
 
 Having completed these warm-up exercises, you are in the position to treat the more complex problem using similar methods. You are free to choose a method. We propose the following structure of your code:  
 

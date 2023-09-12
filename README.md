@@ -2,11 +2,11 @@ General information about the CTL course available at https://ctl.polyphys.mat.e
 
 # :wave: Solvent accessible surface area (SASA)
 
-Consider a system composed of filled monodisperse spheres of identical radius $R$ contained in a periodic cubic (3D) box, and surrounded by empty space or 'solvent'. The filled spheres may partially overlap. Two out of the many interesting geometrical properties of such systems are the volume fraction of the filled spheres, and the part of the surface area of the filled region, so-called SASA($r$) that is accessible by an additional 'solvent' sphere of radius $r$ that is fully located in the empty space but touches the surface of the filled region. For $r=0$, SASA is the total surface area of the filled region, and for $r\rightarrow\infty$, SASA approaches zero. 
+Consider a system composed of filled monodisperse spheres of identical radius $R$ contained in a periodic cubic (3D) box, and surrounded by empty space or 'solvent'. The filled spheres may partially overlap. In this project, we will consider two of the many interesting geometrical properties of such systems. The first property we will consider is the volume fraction of the filled spheres, which corresponds to the ratio of the total volume occupied by the filled spheres to the volume of the entire cubic box in which they are contained. The second property we will consider is the part of the filled regions's surface area which can be reached by an additional 'solvent sphere' of radius $r$ which is located entirely in the empty space but is in contact with the surface area of the filled region. This quantity is called SASA($r$). For $r=0$, SASA($r$) is the total surface area of the filled region, and for $r\rightarrow\infty$, SASA($r$) approaches zero.    
 
 # Warm-up exercise 
 
-To prepare you for a possible solution strategy to these problems using random numbers, this project begins with two simpler tasks: (A) the area $A$ enclosed by, and (B) the perimeter $L$  (marked red) of the overlapping half circles. 
+To prepare you for a possible solution strategy to these problems using random numbers, this project begins with two simpler tasks: compute (A) the area $A$ enclosed by, and (B) the perimeter $L$ (marked in red) of the overlapping half circles. 
 
 <img src="https://ctl.polyphys.mat.ethz.ch/CTL-I-PUBLIC/SASA/preSASA.png" width="50%">
 

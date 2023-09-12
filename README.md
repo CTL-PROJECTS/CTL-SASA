@@ -1,4 +1,4 @@
-General information about the CTL course available at https://ctl.polyphys.mat.ethz.ch/
+General information about the CTL course available at https://ctl.polyphys.mat.ethz.ch/ 
 
 # :wave: Solvent (or Roomba) accessible surface area (SASA)
 

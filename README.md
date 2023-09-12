@@ -11,11 +11,11 @@ To prepare you for a possible solution strategy to these problems using random n
 <img src="https://ctl.polyphys.mat.ethz.ch/CTL-I-PUBLIC/SASA/preSASA.png" width="50%">
 
 The centers of the half circles of radius $R_1=1.5$ and $R_2=0.5$ are at ${\bf c}^{(1)}=(0,0)$ and ${\bf c}^{(2)}=(1.2,0)$. The half circles are both enclosed within the rectangular area $[a,b]\times [c,d]$ with $a=-2$, $b=2$, $c=0$, and $d=2$, as shown.
-(A) Implement the following three methods to estimate area $A$, which becomes especially convenient, if you first define a function $f(x)$ that agrees with the red line, and is zero otherwise, i.e., for $x < c_x^{(1)}-R_1=-1.5$ and $x > c_x^{(2)}+R_2=1.7$.
+(A) Implement the following three methods to estimate area $A$. To do so, you should first define a function $f(x)$ that agrees with the red line, and is zero otherwise, i.e., for $x < c_x^{(1)}-R_1=-1.5$ and $x > c_x^{(2)}+R_2=1.7$.
 
     Check your python def f(x): plot this function, and compare with the above figure.
 
-The three methods are
+The three methods are:
 
 1. Classical Riemann definition of an integral upon replacing the half circles by a function $f(x)$, and using $N$ bins of size $dx=(b-a)/N$ to estimate $A=\int_a^b f(x)\ dx$.
 2. Monte Carlo with probability density $p(x)=(b-a)^{-1}$, using $N$ shots. The integal $A$ is estimated via $\langle f(x)/p(x)\rangle = (b-a)\langle f(x)\rangle$, i.e., by the mean $f$-value at the random poxitions $x$, multiplied by the interval length $b-a$.

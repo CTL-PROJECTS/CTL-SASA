@@ -63,17 +63,21 @@ Use the above functions to create systems with $N=50$ spheres of radius $R$ betw
 
 ## Application 2
 
-Use the above functions to create a system with $N=50$ spheres of radius $R=0.1$, and plot SASA($r$) as function of $r$. SASA should decrease from a value smaller (why?) or equal to $A$ at $r=0$ to zero at $r=1$.
+Create a system with a single 3D sphere ($N=1$) of radius $R=0.1$, centered at a random position within your simulation box with side length 1. Calculate the SASA value and verify that you correctly obtain SASA $=4\pi R^2\approx 0.12566$ independently of the center position. Then create a system with two overlapping spheres of radius $R=0.1$, whose centers have distance $0.1$. Calculate the SASA value, the exact result is $2R^2\int_0^{2\pi} \int_{-1}^{1/2} dz d\phi = 6\pi R^2 \approx 0.188496$.
 
 ## Application 3
 
-Modify the code so that it works equally well for 2D systems and introduce the space dimension $D$ as an additional argument in all functions (allow for $D=2$ or $D=3$). Note that several expression such as $A$ have to be adjusted, and generate_system as well. 
+Use the above functions to create a system with $N=50$ spheres of radius $R=0.1$, and plot SASA($r$) as function of $r$. SASA should decrease from a value smaller (why?) or equal to $A$ at $r=0$ to zero at $r=1$.
 
 ## Application 4
 
-Generate a 2D system with $N=50$ circles of radius $R=0.1$ and plot the configuration. 
+Modify the code so that it works equally well for 2D systems and introduce the space dimension $D$ as an additional argument in all functions (allow for $D=2$ or $D=3$). Note that several expression such as $A$ have to be adjusted, and generate_system as well. 
 
 ## Application 5
+
+Generate a 2D system with $N=50$ circles of radius $R=0.1$ and plot the configuration. 
+
+## Application 6
 
 Verify the applicability of the 2D formula $\phi=1-\exp(-\pi N R^2)$.
 
